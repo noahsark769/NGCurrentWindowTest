@@ -45,6 +45,14 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(_:))))
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("View will appear!")
+
+        print("Containing scene using responder chain: \(self.containingScene)")
+        print("Containing scene using window: \(self.containingSceneUsingWindow)")
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("View did appear!")
